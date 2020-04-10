@@ -42,7 +42,14 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
-		
+		String s = "lizard";		
+		try {
+			assertEquals("drazil", em.reverseString(s));
+			fail("IllegalStateException not thrown");
+		}catch(IndexOutOfBoundsException e) {
+			e.printStackTrace();
+			assertEquals("drazil", em.reverseString(s));
+		}
 	}
 	
 	
