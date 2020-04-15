@@ -18,11 +18,11 @@ public class ExceptionMethods {
 		//   if the String passed in is empty
 		String reverseString(String s) throws IllegalStateException{
 			String rs = "";
-			if(s.length()==0) {
+			if(s.isEmpty()) {
 				throw new IllegalStateException();
 			}
 			else {
-				for(int i = s.length()-1; i >= 0;i++) {
+				for(int i = s.length()-1; i >= 0;i--) {
 					rs = rs + s.charAt(i);
 				}
 				return rs;
